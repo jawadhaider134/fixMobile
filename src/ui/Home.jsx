@@ -1,5 +1,7 @@
 import { Smartphone, Battery, Droplet, Wrench, CheckCircle } from "lucide-react";
 import HeroImg from "../assets/hero-image.png"
+// import { Star } from "lucide-react";
+import Testemonials from "./Testemonials";
 
 export default function Home() {
   // Services data
@@ -35,10 +37,33 @@ export default function Home() {
   ];
 
   // Testimonials placeholder
-  const testimonials = [
-    { name: "Ali Khan", text: "My iPhone screen was fixed in under 30 minutes. Highly recommend!" },
-    { name: "Sara Rahimi", text: "Professional and quick service. My Samsung works perfectly now." },
-  ];
+ const testimonials = [
+  {
+    name: "Sarah Johnson",
+    photo: "https://randomuser.me/api/portraits/women/68.jpg",
+    rating: 5,
+    text: "This product is amazing! The quality exceeded my expectations."
+  },
+  {
+    name: "John Doe",
+    photo: "https://randomuser.me/api/portraits/men/32.jpg",
+    rating: 4,
+    text: "Fantastic service and fast delivery. Highly recommended!"
+  },
+  {
+    name: "Emily Clark",
+    photo: "https://randomuser.me/api/portraits/women/44.jpg",
+    rating: 5,
+    text: "Absolutely love it! I will definitely buy again."
+  },
+  {
+    name: "Michael Smith",
+    photo: "https://randomuser.me/api/portraits/men/76.jpg",
+    rating: 4,
+    text: "Good quality, prompt support. Happy with my purchase!"
+  }
+];
+
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -110,17 +135,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="max-w-6xl mx-auto py-20 px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {testimonials.map((t, i) => (
-            <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-lg transition">
-              <p className="italic mb-4">"{t.text}"</p>
-              <span className="font-semibold text-gray-800 dark:text-gray-100">{t.name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Testemonials />
     </div>
   );
 }
