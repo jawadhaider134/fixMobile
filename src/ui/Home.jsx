@@ -2,6 +2,7 @@ import { Smartphone, Battery, Droplet, Wrench, CheckCircle } from "lucide-react"
 import HeroImg from "../assets/hero-image.png"
 // import { Star } from "lucide-react";
 import Testemonials from "./Testemonials";
+import Footer from "./Footer";
 
 export default function Home() {
   // Services data
@@ -66,6 +67,7 @@ export default function Home() {
 
 
   return (
+    <>
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
      <section className="relative text-white overflow-hidden bg-black">
@@ -136,6 +138,8 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <Testemonials />
+    <Footer />
     </div>
+    </>
   );
 }

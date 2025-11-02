@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar  from "./ui/Navbar";
 import Home from "./ui/Home";
+import Footer from "./ui/Footer";
 // import Footer from "./components/Footer";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -23,7 +24,6 @@ function App() {
         {/* <Route path="/mobiles/samsung" element={<Samsung />} /> */}
         {/* <Route path="/mobiles/xiaomi" element={<Xiaomi />} />  */}
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 }
