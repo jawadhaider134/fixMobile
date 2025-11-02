@@ -103,23 +103,24 @@ export default function Testimonials() {
         </div>
 
         {/* Navigation Buttons moved outside overflow-hidden */}
-        <div className="absolute top-1/2 left-[-80px] transform -translate-y-1/2 z-20">
-          <button
-            onClick={prevSlide}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded shadow-lg"
-          >
-             <ArrowLeft className="w-5 h-5" />
-          </button>
-        </div>
+        {/* Navigation Buttons */}
+<div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-20 md:-left-20">
+  <button
+    onClick={prevSlide}
+    className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded shadow-lg md:px-6 md:py-2"
+  >
+    <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
+  </button>
+</div>
 
-        <div className="absolute top-1/2 right-[-80px] transform -translate-y-1/2 z-20">
-          <button
-            onClick={nextSlide}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded shadow-lg"
-          >
-             <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
+<div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-20 md:-right-20">
+  <button
+    onClick={nextSlide}
+    className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded shadow-lg md:px-6 md:py-2"
+  >
+    <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+  </button>
+</div>
       </div>
     </section>
   );
