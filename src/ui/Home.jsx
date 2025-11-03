@@ -1,4 +1,4 @@
-import { Smartphone, Battery, Droplet, Wrench, CheckCircle } from "lucide-react";
+import { Smartphone, Battery, Droplet, Wrench, CheckCircle , Laptop ,Tablet, Monitor, Watch, Speaker, Volume2, Gamepad, Camera } from "lucide-react";
 import HeroImg from "../assets/hero-image.png"
 // import { Star } from "lucide-react";
 import Testemonials from "./Testemonials";
@@ -70,40 +70,92 @@ export default function Home() {
     <>
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
-     <section className="relative text-white overflow-hidden bg-black">
-      {/* Gray circular glow bottom-left */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-[#3a3a3a] to-transparent rounded-full blur-[160px] opacity-60 pointer-events-none"></div>
+<section
+  className="relative bg-[#1f1f1f] text-white overflow-hidden py-16 h-[90vh]"
+  style={{
+    backgroundImage: `url('/src/assets/divider.jpg')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: "cover",
+    backgroundPosition: "center center", 
+  }}
+>
+  {/* Left glow */}
+  <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-[#3a3a3a] to-transparent rounded-full blur-[160px] opacity-60 pointer-events-none"></div>
 
-      {/* Hero Content */}
-      <div className="relative container mx-auto px-6 md:px-16 py-20 flex flex-col md:flex-row items-center justify-between z-10">
-        {/* Left (Image) */}
-        <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
-          <img
-            src={HeroImg}
-            alt="Electronic Devices"
-            className="max-w-[90%] md:max-w-[85%] relative z-10"
-          />
-        </div>
-
-        {/* Right (Text + CTA) */}
-        <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Fast & Reliable <br /> Device Repairs
-          </h1>
-          <p className="text-gray-300 text-lg md:text-xl max-w-md mx-auto md:mx-0">
-            We repair phones, tablets, laptops, and more — restoring your tech
-            to perfect working condition quickly and affordably.
-          </p>
-          <p className="text-gray-400">
-            Trust our expert technicians for professional service.
-          </p>
-
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg">
-            Get a Free Quote
-          </button>
-        </div>
+  {/* Content wrapper */}
+  <div className="relative container mt-20 mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
+    
+    {/* Left images hidden on mobile */}
+    <div className="w-full md:w-1/2 hidden md:flex justify-center md:justify-start items-end gap-6 mb-10 md:mb-0 relative">
+      {/* Laptop */}
+      <div className="w-full absolute top-[-334px] left-[-120px]">
+        <img
+          src="/src/assets/macbook.png"
+          alt="Laptop"
+          className="w-60 md:w-[40rem] drop-shadow-2xl z-10"
+        />
       </div>
-    </section>
+      {/* iPad */}
+      <div className="absolute right-[-20px] top-[-160px]">
+        <img
+          src="/src/assets/ipad-pro-p.png"
+          alt="iPad"
+          className="w-44 md:w-[25rem] drop-shadow-2xl relative -translate-x-8 -translate-y-8 z-20"
+        />
+      </div>
+      {/* iPhone */}
+      <div className="absolute top-1 right-[-80px]">
+        <img
+          src="/src/assets/apple_iphone-1.png"
+          alt="iPhone"
+          className="w-32 md:w-[20rem] drop-shadow-2xl relative -translate-x-12 -translate-y-12 z-30"
+        />
+      </div>
+    </div>
+
+    {/* Right side */}
+    <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
+      <div>
+        <h2 className="text-3xl md:text-2xl font-bold">We fix all electronic devices</h2>
+        <p className="text-gray-300 text-sm mt-2">Click on your device to see services and prices</p>
+      </div>
+
+      {/* Device icons */}
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 mt-8">
+        {[
+          { label: "Mobile", icon: Smartphone },
+          { label: "Tablet", icon: Tablet },
+          { label: "Laptop", icon: Laptop },
+          { label: "PC/Mac", icon: Monitor },
+          { label: "Watch", icon: Watch },
+          { label: "Sound", icon: Volume2 },
+          { label: "Console", icon: Gamepad },
+          { label: "Camera", icon: Camera },
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="bg-[#2a2a2a] hover:bg-[#333] p-4 rounded-xl flex flex-col items-center justify-center transition cursor-pointer"
+          >
+            <item.icon className="w-8 h-8 text-cyan-400 mb-2" />
+            <p className="text-sm">{item.label}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Contact button */}
+      <div className="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+        <button className="border border-gray-400 hover:border-cyan-400 hover:text-cyan-400 px-6 py-2 rounded-md transition whitespace-nowrap">
+          Contact us
+        </button>
+        <p className="text-gray-400 text-sm">
+          Contact us if your device is not listed here, we are sure we can help you!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
       {/* Services Section */}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Moon, Sun, ChevronDown, Menu, X, Plus, Minus } from "lucide-react";
+import Banner from "./Banner";
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
@@ -45,52 +46,59 @@ export default function Navbar() {
   ];
 
   return (
+    <>
+    <Banner />
     <nav className="bg-white dark:bg-gray-900 shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
           FixNow
         </Link>
+{/* Desktop Menu */}
+<div className="hidden md:flex items-center text-gray-700 dark:text-gray-200">
+  {menuItems.map((item, idx) =>
+    item.dropdown ? (
+      <div
+        key={idx}
+        className={`relative ${
+          idx !== menuItems.length - 1 ? "border-r border-gray-900 dark:border-white pr-4 mr-4" : "pr-0"
+        }`}
+        onMouseEnter={() => setDropdownOpen(true)}
+        onMouseLeave={() => setDropdownOpen(false)}
+      >
+        <button className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400">
+          {item.name} <ChevronDown className="w-4 h-4" />
+        </button>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6 text-gray-700 dark:text-gray-200">
-          {menuItems.map((item, idx) =>
-            item.dropdown ? (
-              <div
-                key={idx}
-                className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-              >
-                <button className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400">
-                  {item.name} <ChevronDown className="w-4 h-4" />
-                </button>
-
-                {dropdownOpen && (
-                  <div className="absolute bg-white dark:bg-gray-800 mt-2 rounded-lg shadow-lg w-40">
-                    {item.dropdown.map((sub, i) => (
-                      <Link
-                        key={i}
-                        to={sub.to}
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
+        {dropdownOpen && (
+          <div className="absolute bg-white dark:bg-gray-800 mt-2 rounded-lg shadow-lg w-40 z-50">
+            {item.dropdown.map((sub, i) => (
               <Link
-                key={idx}
-                to={item.to}
-                className="hover:text-blue-600 dark:hover:text-blue-400"
+                key={i}
+                to={sub.to}
+                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg"
               >
-                {item.name}
+                {sub.name}
               </Link>
-            )
-          )}
-        </div>
+            ))}
+          </div>
+        )}
+      </div>
+    ) : (
+      <Link
+        key={idx}
+        to={item.to}
+        className={`hover:text-blue-600 dark:hover:text-blue-400 ${
+          idx !== menuItems.length - 1 ? "border-r border-gray-900 dark:border-white pr-4 mr-4" : ""
+        }`}
+      >
+        {item.name}
+      </Link>
+    )
+  )}
+</div>
+
+
 
         {/* Dark Mode Toggle + Mobile Hamburger */}
         <div className="flex items-center gap-3">
@@ -190,5 +198,6 @@ export default function Navbar() {
         ></div>
       )}
     </nav>
+    </>
   );
 }
