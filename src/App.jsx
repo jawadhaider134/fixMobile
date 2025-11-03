@@ -4,6 +4,8 @@ import Home from "./ui/Home";
 import Footer from "./ui/Footer";
 import About from "./ui/About";
 import Contact from "./ui/Contact";
+import Mobile from "./ui/Mobile";
+import Iphone from "./ui/Iphone";
 // import Footer from "./components/Footer";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -21,8 +23,8 @@ function App() {
          <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/mobiles" element={<Mobiles />} /> */}
-        {/* <Route path="/mobiles/iphone" element={<Iphone />} /> */}
+        <Route path="/mobiles" element={<Mobile />} />
+        <Route path="/mobiles/iphone" element={<Iphone />} />
         {/* <Route path="/mobiles/samsung" element={<Samsung />} /> */}
         {/* <Route path="/mobiles/xiaomi" element={<Xiaomi />} />  */}
       </Routes>

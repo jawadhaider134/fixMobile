@@ -9,27 +9,27 @@ export default function Contact() {
         {/* Left: Contact Info */}
         <div className="space-y-8">
           <h2 className="text-4xl lg:text-5xl font-extrabold text-blue-600 dark:text-blue-400">
-            Contact Us
+            Kontakt Oss
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-lg lg:text-xl leading-relaxed">
-            Have any questions or need assistance? Reach out to us via email, phone, or visit our office. We’re here to help!
+            Har du spørsmål eller trenger hjelp? Ta kontakt med oss via e-post, telefon eller besøk vårt kontor. Vi er her for å hjelpe!
           </p>
 
           <div className="space-y-4">
             {/* Email */}
             <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300 text-lg">
               <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              <span>support@fixnow.com</span>
+              <span>support@tekrepair.no</span>
             </div>
             {/* Address */}
             <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300 text-lg">
               <Home className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              <span>123 Main Street, Kabul, Afghanistan</span>
+              <span>skeiestraen 7 Hundvåg 4083 Stavanger</span>
             </div>
             {/* Phone */}
             <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300 text-lg">
               <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              <span>+1 905-123-4567</span>
+              <span>+47 467 429 64</span>
             </div>
           </div>
         </div>
@@ -39,30 +39,30 @@ export default function Contact() {
           <form className="space-y-6">
             <div>
               <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                Name
+                Navn
               </label>
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Ditt navn"
                 className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 outline-none transition"
               />
             </div>
             <div>
               <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                Email
+                E-post
               </label>
               <input
                 type="email"
-                placeholder="Your Email"
+                placeholder="Din e-post"
                 className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 outline-none transition"
               />
             </div>
             <div>
               <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">
-                Message
+                Melding
               </label>
               <textarea
-                placeholder="Your Message"
+                placeholder="Din melding"
                 className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 outline-none transition resize-none h-32"
               ></textarea>
             </div>
@@ -70,7 +70,7 @@ export default function Contact() {
               type="submit"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transform transition hover:scale-105 duration-300"
             >
-              Send Message
+              Send melding
             </button>
           </form>
         </div>

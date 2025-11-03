@@ -1,0 +1,22 @@
+{
+  "companies": [
+    {
+      "name": "iPhone",
+      "slug": "iphone",
+      "logo": "/src/assets/iphone-logo.png",
+      "products": [
+        { "name": "iPhone 14", "image": "/src/assets/iphone14.png", "price": "$799" },
+        { "name": "iPhone 14 Pro", "image": "/src/assets/iphone14pro.png", "price": "$999" }
+      ]
+    },
+    {
+      "name": "Samsung",
+      "slug": "samsung",
+      "logo": "/src/assets/samsung-logo.png",
+      "products": [
+        { "name": "Galaxy S23", "image": "/src/assets/galaxys23.png", "price": "$699" },
+        { "name": "Galaxy Note 20", "image": "/src/assets/galaxynote20.png", "price": "$899" }
+      ]
+    }
+  ]
+}

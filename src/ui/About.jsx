@@ -5,20 +5,20 @@ import Footer from "./Footer";
 export default function About() {
   const sections = [
     {
-      title: "Who We Are",
-      desc: "FixNow is a full‑service electronics repair company dedicated to restoring your devices back to peak performance with speed, reliability and honesty.",
+      title: "Hvem vi er",
+      desc: "FixNow er et fullservice reparasjonsfirma for elektronikk som er dedikert til å bringe enhetene dine tilbake til topp ytelse med hastighet, pålitelighet og ærlighet.",
       img: Ab1,
       reverse: false,
     },
     {
-      title: "Our Mission",
-      desc: "We believe in empowering our clients with devices that work flawlessly — so you don’t need to worry about tech failing you. Genuine parts, certified technicians, fast turnaround.",
+      title: "Vår misjon",
+      desc: "Vi tror på å gi kundene våre enheter som fungerer feilfritt – så du slipper å bekymre deg for at teknologien svikter. Ekte deler, sertifiserte teknikere, rask levering.",
       img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
       reverse: true,
     },
     {
-      title: "Our Vision",
-      desc: "To be the most trusted repair partner for everyone — backed by transparent pricing, outstanding customer service and a warranty you can count on.",
+      title: "Vår visjon",
+      desc: "Å være den mest pålitelige reparasjonspartneren for alle – støttet av gjennomsiktig prising, fremragende kundeservice og en garanti du kan stole på.",
       img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
       reverse: false,
     },
@@ -29,10 +29,10 @@ export default function About() {
       {/* Hero */}
       <section className="py-24 px-6 lg:px-16 text-center">
         <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 text-blue-600 dark:text-blue-400 leading-tight">
-          About FixNow
+          Om FixNow
         </h1>
         <p className="max-w-3xl mx-auto text-lg lg:text-xl text-gray-700 dark:text-gray-300">
-          We fix your devices fast and reliably. Our team of experts uses genuine parts to give your tech a second life.
+          Vi reparerer enhetene dine raskt og pålitelig. Vårt ekspertteam bruker ekte deler for å gi teknologien din et nytt liv.
         </p>
       </section>
 
@@ -68,13 +68,13 @@ export default function About() {
       {/* Call to Action */}
       <section className="py-24 px-6 lg:px-16 text-center bg-white dark:bg-gray-900 border-t mt-10">
         <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 dark:text-gray-100 mb-6">
-          Ready to get started?
+          Klar til å komme i gang?
         </h2>
         <p className="text-gray-700 dark:text-gray-300 text-lg lg:text-xl mb-10">
-          Reach out today and let us handle your device repairs with care and speed.
+          Ta kontakt i dag, så håndterer vi reparasjonen av enheten din med omsorg og hastighet.
         </p>
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transform transition hover:scale-105 duration-300">
-          Contact Us
+          Kontakt oss
         </button>
       </section>
       <Footer />

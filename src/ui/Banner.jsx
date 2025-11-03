@@ -7,7 +7,7 @@ export default function Banner() {
       {/* Phone section */}
       <div className="flex items-center gap-2">
         <Phone className="w-5 h-5" />
-        <span>+1 (555) 123-4567</span>
+        <span>+47 467 429 64</span> {/* Norwegian phone format */}
       </div>
 
       {/* Divider */}
@@ -16,7 +16,7 @@ export default function Banner() {
       {/* Working hours section */}
       <div className="flex items-center gap-2">
         <Clock className="w-5 h-5" />
-        <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+        <span>Man - Lør: 09:00 - 18:00</span> {/* Norwegian time format */}
       </div>
     </div>
   );
